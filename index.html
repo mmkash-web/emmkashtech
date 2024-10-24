@@ -80,9 +80,10 @@
             align-items: center;
             justify-content: space-between;
             gap: 20px;
+            flex-wrap: wrap;
         }
         .about-section img {
-            max-width: 40%;
+            max-width: 100%;
         }
         .services-section ul {
             list-style: none;
@@ -92,6 +93,7 @@
             display: flex;
             align-items: center;
             margin-bottom: 20px;
+            flex-wrap: wrap;
         }
         .services-section img {
             max-width: 80px;
@@ -139,6 +141,42 @@
         .cta-button:hover {
             background-color: #ff4500;
         }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            section {
+                padding: 20px;
+            }
+            nav a {
+                font-size: 1em;
+                padding: 8px 15px;
+            }
+            .about-section {
+                flex-direction: column;
+            }
+            .about-section img {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            nav a {
+                font-size: 0.9em;
+                margin: 0 5px;
+                padding: 8px 12px;
+            }
+            .cta-button {
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -184,14 +222,12 @@
             <img src="images/education.jpg" alt="Educational Resources">
             <strong>Educational Resources:</strong> We offer tutorials and resources on utilizing technology effectively for personal and professional growth.
         </li>
-        <!-- Add more services similarly -->
     </ul>
 </section>
 
 <section id="tech-content">
     <h2>Tech Insights</h2>
     <p>In today's fast-paced digital landscape, having access to technology is essential. At EMMKASH TECHNOLOGIES, we believe that technology should be accessible to everyone. Here are some key areas we focus on:</p>
-    <!-- Content remains the same -->
 </section>
 
 <section id="contact">
